@@ -1,4 +1,5 @@
-CREATE TABLE cars (
+Struttura base di un db di auto usate (ed esclusivamente usate, da cui il chilometraggio obbligatorio)
+
 	car_id INT(10) NOT NULL AUTO_INCREMENT,
 	model VARCHAR(20) NOT NULL,
 	brand VARCHAR(10) NOT NULL,
@@ -12,9 +13,3 @@ CREATE TABLE cars (
 	ad_date DATE,
 	PRIMARY KEY ( car_id ),
 	fuel_category TINYINT DEFAULT 0 /* 'finto' richiamo ad altra table, con tipi carburante: 0=benzina, 1=diesel, etc */
-);
-
-INSERT INTO cars (model, price, car_year, brand, mileage_in_km, plate) VALUES ('panda', 500, 2007, 'fiat', 300, 'abc123');
-INSERT INTO cars (model, price, car_year, brand, mileage_in_km, plate) VALUES ('bohboh', 100000, 2018, 'tesla', 4000, 'abd123'); 
-
-SELECT * FROM cars;

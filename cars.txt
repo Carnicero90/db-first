@@ -1,0 +1,19 @@
+CREATE TABLE cars (
+	car_id INT(10) NOT NULL AUTO_INCREMENT,
+	model VARCHAR(20) NOT NULL,
+	brand VARCHAR(10) NOT NULL,
+	price FLOAT(10,2) NOT NULL,
+	year YEAR,
+	status_description TEXT(500),
+	mileage_in_km INT(10) NOT NULL,
+	euro_rank INT(1),
+	plate VARCHAR(10) NOT NULL UNIQUE,
+	pics VARCHAR(10),
+	ad_date DATE,
+	PRIMARY KEY ( car_id )
+);
+INSERT INTO cars (model, price, year, brand, mileage_in_km, plate) VALUES ('panda', 500, 2007, 'fiat', 300, 'abc123');
+INSERT INTO cars (model, price, year, brand, mileage_in_km, plate) VALUES ('bohboh', 100000, 2018, 'tesla', 4000, 'abd123'); 
+SELECT * FROM cars;
+
+
